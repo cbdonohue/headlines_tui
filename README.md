@@ -37,7 +37,7 @@ Terminal News Reader is a Rust application that fetches news articles using the 
     cd terminal-news-reader
     ```
 
-2. Create a `.env` file in the project root and add your NewsAPI key:
+2. Create a `.env` file in the project root and add your [NewsAPI key](https://newsdata.io/):
     ```env
     NEWSAPI_KEY=your_newsapi_key
     ```
