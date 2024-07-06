@@ -1,6 +1,6 @@
 # Headlines TUI
 
-Terminal News Reader is a Rust application that fetches news articles using the NewsAPI and displays them in a terminal-based interface using the `ratatui` library. It allows you to browse through the latest news headlines, read the content of selected articles, and mark articles as read or unread.
+Headlines TUI is a Rust application that fetches news articles using the NewsAPI and displays them in a terminal-based interface using the `ratatui` library. It allows you to browse through the latest news headlines, read the content of selected articles, and mark articles as read or unread.
 
 ## Features
 
