@@ -44,7 +44,7 @@ https://github.com/cbdonohue/headlines_tui/assets/1757340/cd770fdb-6d67-49ae-9a5
 
 3. Build the project:
     ```sh
-    cargo build
+    cargo build --bin headlines
     ```
 
 4. Run the project:
