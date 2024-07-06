@@ -48,16 +48,23 @@ const COMPLETED_TEXT_FG_COLOR: Color = GREEN.c500;
 fn main() -> Result<(), Box<dyn Error>> {
     CombinedLogger::init(
         vec![
-            TermLogger::new(LevelFilter::Warn, Config::default(), TerminalMode::Mixed, ColorChoice::Auto),
             WriteLogger::new(LevelFilter::Info, Config::default(), File::create("my_rust_binary.log").unwrap()),
         ]
     ).unwrap();
+
+    // Get the query from command line arguments
+    let args: Vec<String> = env::args().collect();
+    let query = if args.len() > 1 {
+        &args[1]
+    } else {
+        "Headline News USA"
+    };
 
     tui::init_error_hooks()?;
     let terminal = tui::init_terminal()?;
 
     let mut app = App::default();
-    app.add_articles(&fetch_news_articles()?.articles);
+    app.add_articles(&fetch_news_articles(query)?.articles);
     app.run(terminal)?;
 
     tui::restore_terminal()?;
@@ -75,7 +82,7 @@ fn fetch_full_article(article: &newsapi::payload::article::Article) -> Result<St
     Ok(readability.text)
 }
 
-fn fetch_news_articles() -> Result<Articles, Box<dyn std::error::Error>> {
+fn fetch_news_articles(query: &str) -> Result<Articles, Box<dyn std::error::Error>> {
     // Load environment variables from the .env file
     dotenv().ok();
 
@@ -91,7 +98,7 @@ fn fetch_news_articles() -> Result<Articles, Box<dyn std::error::Error>> {
     c.language(Language::German)
         .from(&start_timestamp)
         .to(&end_timestamp)
-        .query("Trump America")
+        .query(query)
         .category(Category::General)
         .sort_by(SortMethod::Popularity)
         .language(Language::English)
