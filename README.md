@@ -33,7 +33,7 @@ Terminal News Reader is a Rust application that fetches news articles using the 
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/terminal-news-reader.git
+    git clone [https://github.com/yourusername/terminal-news-reader.git](https://github.com/cbdonohue/headlines_tui)
     cd terminal-news-reader
     ```
 
