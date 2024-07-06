@@ -1,4 +1,4 @@
-# Terminal News Reader
+# Headlines TUI
 
 Terminal News Reader is a Rust application that fetches news articles using the NewsAPI and displays them in a terminal-based interface using the `ratatui` library. It allows you to browse through the latest news headlines, read the content of selected articles, and mark articles as read or unread.
 
@@ -34,7 +34,7 @@ Terminal News Reader is a Rust application that fetches news articles using the 
 1. Clone the repository:
     ```sh
     git clone https://github.com/cbdonohue/headlines_tui
-    cd terminal-news-reader
+    cd headlines_tui
     ```
 
 2. Create a `.env` file in the project root and add your [NewsAPI key](https://newsdata.io/):
