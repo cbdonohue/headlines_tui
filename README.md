@@ -49,7 +49,7 @@ https://github.com/cbdonohue/headlines_tui/assets/1757340/cd770fdb-6d67-49ae-9a5
 
 4. Run the project:
     ```sh
-    cargo run --bin article
+    cargo run --bin headlines
     ```
 
 ## Usage
