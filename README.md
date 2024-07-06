@@ -1,5 +1,7 @@
 # Headlines TUI
 
+https://github.com/cbdonohue/headlines_tui/assets/1757340/cd770fdb-6d67-49ae-9a5a-8e5b138440bc
+
 Headlines TUI is a Rust application that fetches news articles using the NewsAPI and displays them in a terminal-based interface using the `ratatui` library. It allows you to browse through the latest news headlines, read the content of selected articles, and mark articles as read or unread.
 
 ## Features
